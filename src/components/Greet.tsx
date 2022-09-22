@@ -1,6 +1,6 @@
 type GreetProps = {
     me : string,
-    messageCount : number,
+    messageCount ?: number,
     isLoggedIn : boolean
 }
 
