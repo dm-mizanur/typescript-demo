@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Button from './components/Button';
 import Container from './components/Container';
+import { Box } from './components/context/Box';
+import { ThemeContextProvider } from './components/context/ThemeContext';
 import { Greet } from './components/Greet';
 import Heading from './components/Heading';
 import Input from './components/Input';
@@ -37,6 +39,7 @@ function App() {
 
   return (
     <div className="App">
+      <ThemeContextProvider><Box/></ThemeContextProvider>
       <Greet me="DMR" messageCount={10} isLoggedIn={false}/>
       <Person name={personName}/>
       <PersonList names={nameList}/>
