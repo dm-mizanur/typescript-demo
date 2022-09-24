@@ -1,15 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { PersonProps } from './Person.types';
 
-type PersonProps = {
-    name : {
-        first : string,
-        last : string
-    }
-}
-
-const Person = (props : PersonProps) => {
+const Person = ({name} : PersonProps) => {
   return (
-    <div>{props.name.first} {props.name.last}</div>
+    <div>{name.first} {name.last}</div>
   )
 }
 
