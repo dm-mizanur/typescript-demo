@@ -5,9 +5,9 @@ type PropsChildren = {
 }
 
 
-const Heading = (props : PropsChildren) => {
+const Heading = ({children} : PropsChildren) => {
   return (
-    <div>{props.children}</div>
+    <div>{children}</div>
   )
 }
 

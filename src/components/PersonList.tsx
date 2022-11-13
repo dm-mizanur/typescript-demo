@@ -5,11 +5,11 @@ type PersonListProps = {
     names : Name[]
 }
 
-const PersonList = (props : PersonListProps) => {
+const PersonList = ({names} : PersonListProps) => {
   return (
     <div>
       {
-        props.names.map((name,i) => {
+        names.map((name,i) => {
           return (
             <h2 key={i}>{name.first} {name.last}</h2>
           )

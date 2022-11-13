@@ -4,18 +4,18 @@ type StatusProps = {
   status : 'loading' | 'success' | 'error'
 }
 
-const Status = (props : StatusProps) => {
+const Status = ({status} : StatusProps) => {
   let message;
-  if(props.status === "loading"){
+  if(status === "loading"){
     message = 'Loading'
-  }else if (props.status === 'success'){
+  }else if (status === 'success'){
     message = 'Data fetch successfully'
-  }else if(props.status === 'error'){
+  }else if(status === 'error'){
     message = "Error fetching data"
   }
   return (
     <div>
-          <h2>{props.status}</h2>
+          <h2>{status}</h2>
     </div>
   )
 }
